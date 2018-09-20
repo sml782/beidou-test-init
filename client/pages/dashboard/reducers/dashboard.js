@@ -32,9 +32,14 @@ export default handleActions(
       state,
       ...initialState,
     }),
+    [actions.dashboard.fetchSuccess]: state => ({
+      ...state,
+      loading: true,
+    }),
     [actions.dashboard.fetchSuccess]: (state, { payload: { dashboard } }) => ({
       ...state,
       ...dashboard,
+      loading: false,
     }),
     [actions.common.toggleTheme]: (state, { payload: { theme } }) => ({
       ...state,

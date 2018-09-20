@@ -27,7 +27,7 @@ const bodyStyle = {
 
 class Dashboard extends React.Component {
   componentDidMount() {
-    this.props.dispatch(actions.dashboard.fetch());
+    this.props.fetch();
   }
 
   render() {
@@ -42,7 +42,9 @@ class Dashboard extends React.Component {
       browser,
       cpu,
       user,
+      loading,
     } = this.props;
+
     const numberCards = numbers.map(item => (
       <Col key={item} lg={6} md={12}>
         <NumberCard {...item} />
@@ -75,7 +77,7 @@ class Dashboard extends React.Component {
                     background: color.blue,
                   }}
                 >
-                  <Weather {...weather} />
+                  <Weather {...weather} loading={loading} />
                 </Card>
               </Col>
               <Col lg={24} md={12}>
@@ -141,4 +143,10 @@ Dashboard.propTypes = {
   dashboard: PropTypes.object,
 };
 
-export default connect(state => state.dashboard)(Dashboard);
+export default connect(
+  state => state.dashboard,
+  dispatch => ({
+    dispatch,
+    fetch: () => dispatch(actions.dashboard.fetch()),
+  }),
+)(Dashboard);

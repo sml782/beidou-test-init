@@ -10,7 +10,8 @@ const cx = classNames.bind(style);
 const FormItem = Form.Item;
 
 const Login = ({
-  dispatch,
+  // dispatch,
+  login,
   form: { getFieldDecorator, validateFieldsAndScroll },
   message: { error, text },
   loading,
@@ -21,7 +22,7 @@ const Login = ({
       if (errors) {
         return;
       }
-      dispatch(actions.login(values));
+      login(values);
     });
   }
 
@@ -84,7 +85,13 @@ const Login = ({
   );
 };
 
-export default connect(state => state)(
+export default connect(
+  state => state,
+  dispatch => ({
+    dispatch,
+    login: values => dispatch(actions.login(values)),
+  }),
+)(
   Form.create({
     onFieldsChange(props, changedFields) {
       props.dispatch(actions.fieldChange(changedFields));

@@ -1,3 +1,5 @@
+import { Decrypt } from '../utils/crypto';
+
 module.exports = (app) => {
   // validate rules
   const loginRule = {
@@ -10,19 +12,17 @@ module.exports = (app) => {
       const { ctx } = this;
       ctx.validate(loginRule);
 
-      const { username, password } = ctx.request.body;
+      let { username, password } = ctx.request.body;
+      username = Decrypt(username);
+      password = Decrypt(password);
       if (username && password) {
         const user = await this.service.user.find(username, password);
         if (user) {
           ctx.session.user = user;
 
-          ctx.body = {
-            success: true,
-          };
+          ctx.success('登陆成功');
         } else {
-          ctx.body = {
-            success: false,
-          };
+          ctx.error(401, '当前用户不存在！');
         }
       }
       ctx.status = 200;

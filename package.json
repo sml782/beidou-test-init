@@ -1,6 +1,6 @@
 {
-  "name": "beidou-example-antd-admin",
-  "version": "1.0.9",
+  "name": "beidou-test-init",
+  "version": "0.0.1",
   "description": "beidou antd template",
   "scripts": {
     "start": "beidou start",

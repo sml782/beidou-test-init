@@ -28,6 +28,7 @@
     "echarts-liquidfill": "^1.1.0",
     "egg-userrole": "^1.1.2",
     "egg-validate": "^1.0.0",
+    "extend": "^3.0.2",
     "js-cookie": "^2.2.0",
     "koa-is-json": "^1.0.0",
     "koa-safe-jsonp": "^0.3.1",

@@ -18,7 +18,7 @@ const Router = __CLIENT__ ? BrowserRouter : StaticRouter;
 export default class RouteView extends View {
   static defaultProps = {
     title: 'dashboard',
-    asset: 'main',
+    asset: 'dashboard',
   };
 
   static async getStore({ ctx }) {

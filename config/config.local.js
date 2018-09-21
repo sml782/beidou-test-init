@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   webpack: {
     custom: {
-      configPath: path.join(__dirname, './webpack.config.js'),
+      configPath: path.join(__dirname, '../webpack/webpack.config.dev.js'),
     },
   },
   react: {},

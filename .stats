@@ -1,28 +1,28 @@
-Hash: 941b484a6ad8ffd34074
+Hash: d351f331d2f243709055
 Version: webpack 3.12.0
-Time: 9733ms
+Time: 10247ms
                             Asset     Size  Chunks                    Chunk Names
-dashboard.js?941b484a6ad8ffd34074  6.05 MB       0  [emitted]  [big]  dashboard
-    login.js?941b484a6ad8ffd34074   611 kB       1  [emitted]  [big]  login
-                      manifest.js  1.53 MB       2  [emitted]  [big]  manifest
+dashboard.js?d351f331d2f243709055  6.05 MB       0  [emitted]  [big]  dashboard
+    login.js?d351f331d2f243709055   611 kB       1  [emitted]  [big]  login
+                      manifest.js  1.75 MB       2  [emitted]  [big]  manifest
                     dashboard.css  21.3 kB       0  [emitted]         dashboard
                         login.css     1 kB       1  [emitted]         login
-   [1] external "React" 42 bytes {0} {1} [not cacheable]
-  [25] ./node_modules/_react-redux@5.0.7@react-redux/es/index.js 230 bytes {2} [built]
-  [50] ./client/pages/dashboard/actions/index.js 718 bytes {0} [built]
- [105] external "ReactDOM" 42 bytes {0} {1} [not cacheable]
- [577] multi ./client/pages/dashboard/index.jsx 28 bytes {0} [built]
- [578] ./client/pages/dashboard/index.jsx 3.88 kB {0} [built]
- [732] ./client/pages/dashboard/reducers/index.js 202 bytes {0} [built]
-[1162] ./client/pages/dashboard/layout/index.jsx 2.77 kB {0} [built]
-[1170] ./client/pages/dashboard/index.less 41 bytes {0} [built]
-[1171] multi ./client/pages/login/index.jsx 28 bytes {1} [built]
-[1172] ./client/pages/login/index.jsx 2.28 kB {1} [built]
-[1173] ./client/pages/login/reducers/index.js 1.32 kB {1} [built]
-[1174] ./client/pages/login/saga/index.js 1.88 kB {1} [built]
-[1200] ./client/pages/login/container/index.jsx 2.49 kB {1} [built]
-[1202] ./client/pages/login/index.module.less 41 bytes {1} [built]
-    + 1216 hidden modules
+  [35] ./node_modules/_react-redux@5.0.7@react-redux/es/index.js 230 bytes {2} [built]
+  [52] (webpack)/buildin/global.js 509 bytes {2} [built]
+  [64] ./client/pages/dashboard/actions/index.js 718 bytes {0} [built]
+ [118] external "ReactDOM" 42 bytes {0} {1} [not cacheable]
+ [300] ./node_modules/_babel-polyfill@6.26.0@babel-polyfill/lib/index.js 833 bytes {2} [built]
+ [610] multi babel-polyfill ./client/pages/dashboard/index.jsx 40 bytes {0} [built]
+ [812] ./client/pages/dashboard/index.jsx 3.88 kB {0} [built]
+ [876] ./client/pages/dashboard/saga/index.js 2.41 kB {0} [built]
+ [902] ./client/pages/dashboard/routes.jsx 889 bytes {0} [built]
+[1285] ./client/pages/dashboard/layout/index.jsx 2.77 kB {0} [built]
+[1293] ./client/pages/dashboard/index.less 41 bytes {0} [built]
+[1294] multi babel-polyfill ./client/pages/login/index.jsx 40 bytes {1} [built]
+[1295] ./client/pages/login/index.jsx 2.28 kB {1} [built]
+[1323] ./client/pages/login/container/index.jsx 2.49 kB {1} [built]
+[1325] ./client/pages/login/index.module.less 41 bytes {1} [built]
+    + 1339 hidden modules
 Child extract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@3.0.2@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js??ref--6-2!node_modules/_postcss-loader@2.1.6@postcss-loader/lib/index.js??postcss!node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js??ref--6-4!client/components/filter-item/index.module.less:
        [0] ./node_modules/_css-loader@0.28.11@css-loader??ref--6-2!./node_modules/_postcss-loader@2.1.6@postcss-loader/lib??postcss!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js??ref--6-4!./client/components/filter-item/index.module.less 583 bytes {0} [built]
        [1] ./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js 2.26 kB {0} [built]

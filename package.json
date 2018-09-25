@@ -34,7 +34,9 @@
     "koa-safe-jsonp": "^0.3.1",
     "lodash": "^4.17.4",
     "mockjs": "^1.0.1-beta3",
+    "mysql": "^2.16.0",
     "path-to-regexp": "^1.7.0",
+    "preload-webpack-plugin": "^2.3.0",
     "prop-types": "^15.6.0",
     "qs": "^6.5.2",
     "query-string": "^5.1.0",
@@ -50,15 +52,23 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-saga": "^0.16.0",
-    "reqwest": "^2.0.5"
+    "reqwest": "^2.0.5",
+    "sass-loader": "^7.1.0",
+    "sequelize": "^4.38.1",
+    "style-loader": "^0.23.0",
+    "sw-precache-webpack-plugin": "^0.11.5"
   },
   "devDependencies": {
-    "babel-eslint": "^8.1.2",
+    "autoprefixer": "^9.1.5",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.11.0",
     "eslint-config-beidou": "^1.0.9",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-react": "^7.5.1",
-    "globby": "^6.1.0"
+    "globby": "^6.1.0",
+    "pixrem": "^4.0.1",
+    "postcss-loader": "^3.0.0"
   },
   "engines": {
     "node": ">= 8.0.0"

@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+// import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -51,6 +51,15 @@ export class View extends React.Component {
           <script src="https://unpkg.com/antd@3.0.1/dist/antd.min.js" />
           <script src={helper.asset('manifest.js')} />
           <script src={helper.asset(`${asset}.js`)} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ('serviceWorker' in navigator) {
+                  navigator.serviceWorker.register('/service-worker.js');
+                }
+              `,
+            }}
+          />
         </body>
       </html>
     );
@@ -72,6 +81,8 @@ export const render = (App, reducers, saga) => {
 
     // run saga
     saga.run();
+
+    // init serviceWorker
 
     ReactDOM.render(app, document.getElementById('container'));
   }

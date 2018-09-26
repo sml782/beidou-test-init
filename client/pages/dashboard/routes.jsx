@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
+// import LoadComponent from 'client/components/loadable';
+
 import Dashboard from './routes/dashboard';
 import Users from './routes/user';
 import Posts from './routes/post';
@@ -7,11 +9,19 @@ import ECharts from './routes/echarts';
 import HighCharts from './routes/highcharts';
 import Recharts from './routes/recharts';
 
+// const Dashboard = LoadComponent('./routes/dashboard');
+// import Dashboard from './routes/dashboard';
+// import Users from './routes/user';
+// import Posts from './routes/post';
+// import ECharts from './routes/echarts';
+// import HighCharts from './routes/highcharts';
+// import Recharts from './routes/recharts';
+
 // browserHistory.listen(() => {
 //   window.NProgress.start();
 //   window.NProgress.done();
 // });
-
+// console.log(require);
 export default (
   <Switch>
     <Route exact path="/dashboard" component={Dashboard} />

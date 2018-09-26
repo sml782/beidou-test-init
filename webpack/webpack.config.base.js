@@ -47,8 +47,8 @@ exports.plugin = [
   new SWPrecacheWebpackPlugin({
     cacheId: 'beidou-test-init',
     filename: 'service-worker.js',
-    staticFileGlobs: ['./build/*.{js,css,html}'],
+    staticFileGlobs: ['build/*.{js,css,html}'],
     minify: true,
-    stripPrefix: './build/',
+    stripPrefix: 'build/',
   }),
 ];

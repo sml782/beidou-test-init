@@ -4,7 +4,7 @@
 * 客户端使用到的babel配置项在此处配置，.babelrc 中的配置在服务端生效
 */
 const babelrc = {
-  presets: ['react', 'es2015', 'env'],
+  presets: ['react', 'es2015', 'env', 'stage-0', 'stage-3'],
   babelrc: false, // 禁止客户端读取.babelrc文件
   plugins: [
     'transform-runtime',
@@ -12,6 +12,7 @@ const babelrc = {
     'transform-decorators-legacy',
     'transform-react-display-name',
     'transform-regenerator',
+    'syntax-dynamic-import',
   ],
   env: {
     development: {

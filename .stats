@@ -1,12 +1,17 @@
-Hash: d351f331d2f243709055
+Hash: 67a0497f64b0577ea379
 Version: webpack 3.12.0
-Time: 10247ms
-                            Asset     Size  Chunks                    Chunk Names
-dashboard.js?d351f331d2f243709055  6.05 MB       0  [emitted]  [big]  dashboard
-    login.js?d351f331d2f243709055   611 kB       1  [emitted]  [big]  login
-                      manifest.js  1.75 MB       2  [emitted]  [big]  manifest
-                    dashboard.css  21.3 kB       0  [emitted]         dashboard
-                        login.css     1 kB       1  [emitted]         login
+Time: 10131ms
+                                Asset      Size  Chunks                    Chunk Names
+    dashboard.js?67a0497f64b0577ea379   2.38 MB       0  [emitted]  [big]  dashboard
+        login.js?67a0497f64b0577ea379    226 kB       1  [emitted]         login
+                          manifest.js    625 kB       2  [emitted]  [big]  manifest
+                        dashboard.css   21.3 kB       0  [emitted]         dashboard
+                            login.css   1.04 kB       1  [emitted]         login
+dashboard.js.map?67a0497f64b0577ea379   2.48 MB       0  [emitted]  [big]  dashboard
+                    dashboard.css.map  79 bytes       0  [emitted]         dashboard
+    login.js.map?67a0497f64b0577ea379    270 kB       1  [emitted]  [big]  login
+                        login.css.map  75 bytes       1  [emitted]         login
+                      manifest.js.map    746 kB       2  [emitted]         manifest
   [35] ./node_modules/_react-redux@5.0.7@react-redux/es/index.js 230 bytes {2} [built]
   [52] (webpack)/buildin/global.js 509 bytes {2} [built]
   [64] ./client/pages/dashboard/actions/index.js 718 bytes {0} [built]

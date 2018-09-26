@@ -28,6 +28,10 @@ const bodyStyle = {
 class Dashboard extends React.Component {
   componentDidMount() {
     this.props.fetch();
+    // console.log(import('./index.module.less'));
+    require.ensure([], (require) => {
+      return require('./index.module.less');
+    }).then(er => console.log(er));
   }
 
   render() {

@@ -13,6 +13,7 @@ const files = globby.sync(['**/pages/*'], { cwd: `${cwd}/client` });
 const entry = {};
 
 files.forEach((item) => {
+  console.log(item);
   entry[item.replace(/^pages\//, '')] = ['babel-polyfill', path.join(__dirname, `../client/${item}/index.jsx`)];
 });
 

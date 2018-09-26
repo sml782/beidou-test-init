@@ -1,35 +1,60 @@
-'use strict'; // eslint-disable-line
+'use strict';
 
-/**
-* 客户端使用到的babel配置项在此处配置，.babelrc 中的配置在服务端生效
-*/
-const babelrc = {
-  presets: ['react', 'es2015', 'env', 'stage-0', 'stage-3'],
-  babelrc: false, // 禁止客户端读取.babelrc文件
-  plugins: [
-    'transform-runtime',
-    'add-module-exports',
-    'transform-decorators-legacy',
-    'transform-react-display-name',
-    'transform-regenerator',
-    'syntax-dynamic-import',
+const path = require('path');
+const env = require('babel-preset-env');
+const stage2 = require('babel-preset-stage-2');
+const react = require('babel-preset-react');
+const typeCheck = require('babel-plugin-typecheck');
+const reactHotLoader = require('react-hot-loader');
+const syntaxDynamicImport = require('babel-plugin-syntax-dynamic-import');
+const importInspector = require('babel-plugin-import-inspector');
+
+let browsers;
+const defaultList = ['>1%', 'last 4 versions', 'not ie < 9'];
+try {
+  const pkg = require(path.join(process.cwd(), 'package.json'));
+  browsers = pkg.browserslist || defaultList;
+} catch (e) {
+  browsers = defaultList;
+}
+
+module.exports = {
+  presets: [
+    [
+      env,
+      {
+        useBuiltIns: true,
+        modules: false,
+        targets: {
+          browsers,
+        },
+      },
+    ],
+    stage2,
+    react,
   ],
+  // plugins: [
+  //   'syntax-dynamic-import',
+  //   [
+  //     'import-inspector',
+  //     {
+  //       serverSideRequirePath: true,
+  //       webpackRequireWeakId: true,
+  //     },
+  //   ],
+  // ],
   env: {
     development: {
       plugins: [
-        'typecheck',
-        ['babel-plugin-react-transform', // 此处必须以babel-plugin开头,不能缩略,否则会报Unknown plugin "react-transform"
+        typeCheck, reactHotLoader, syntaxDynamicImport,
+        [
+          importInspector,
           {
-            transforms: [{
-              transform: 'react-transform-catch-errors',
-              imports: ['react', 'redbox-react'],
-              locals: ['module'],
-            },
-            ],
-          }],
+            serverSideRequirePath: true,
+            webpackRequireWeakId: true,
+          },
+        ],
       ],
     },
   },
 };
-
-module.exports = babelrc;

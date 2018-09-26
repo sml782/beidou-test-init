@@ -14,7 +14,17 @@ module.exports = (app, defaultConfig) => {
   // bei.plugins = ['syntax-dynamic-import'];
   // const jsMoudle = defaultConfig.module.rules.find(item => /js/.test(item.test.source));
   // jsMoudle.use.options.presets = [babelConfig];
-  // console.log(bei.env.development.plugins);
+  // jsMoudle.use = [
+  //   {
+  //     loader: 'bundle-loader',
+  //     options: {
+  //       lazy: true,
+  //       // name: '[name].[chunkhash:8]',
+  //     },
+  //   },
+  //   jsMoudle.use,
+  // ];
+  // console.log(jsMoudle);
 
   // 删除 DefinePlugin
   defaultConfig.plugins.splice(4, 1);
@@ -38,6 +48,6 @@ module.exports = (app, defaultConfig) => {
     ],
   });
 
-  // console.log(devConfig);
+  console.log(devConfig.output);
   return devConfig;
 };
